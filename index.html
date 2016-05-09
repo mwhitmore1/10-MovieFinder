@@ -1,22 +1,40 @@
 <!DOCTYPE html>
-<html lang="">
+<html lang="" ng-app="app">
 	<head>
 	 	<!-- Required meta tags always come first -->
 		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>Title Page</title>
+		<title>Movie Nerd</title>
 		<!-- Bootstrap CSS -->
 		<link rel="stylesheet" href="https://cdn.rawgit.com/twbs/bootstrap/v4-dev/dist/css/bootstrap.css">
 		<link rel="stylesheet" href="style.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/angularjs-toaster/2.0.0/toaster.min.css"></link>
 	</head>
-	<body>
-		<h1 class="text-xs-center">Hello World</h1>
+	<body ng-controller="mainCtrl as vm">
+		<nav class="navbar navbar-inverse" role="navigation">
+			<div class="navbar-header">
+				<a class="navbar-brand">Movie Nerd</a>
+			</div>
+		
+		<form id="search-title">
+			<input type="text" default="Search by title" ng-model="vm.search">
+			<button class="btn btn-default" ng-click="vm.getData(vm.search)">Search</button>
+		</form>
+		</nav>
+
+		<div ui-view></div>
+
 
 		<!-- jQuery -->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-		<!-- Bootstrap JavaScript -->
 		<script src="https://cdn.rawgit.com/twbs/bootstrap/v4-dev/dist/js/bootstrap.js"></script>
-		<script src="index.js"></script>
+		<script src="bower_components/toastr/toastr.js"></script>
+	    <script src="bower_components/angular/angular.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/angularjs-toaster/2.0.0/toaster.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.18/angular-ui-router.min.js"></script>		
+		<!-- Bootstrap JavaScript -->
+		<script src="app/app.js"></script>
+		<script src="app/appController.js"></script>
+		<script src="app/queryFactory.js"></script>
+		<script src="app/cacheFactory.js"></script>
 	</body>
 </html>
