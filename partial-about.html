@@ -1,0 +1,29 @@
+<div class="flex-container no-wrap" ng-controller="aboutController as aboutVm">
+  <div class="stat-column">
+    <div class="movie-title">
+      <h3>{{aboutVm.title.Title}}</h3>
+      ({{aboutVm.title.Year}})
+    </div>
+    <div class="center">
+      <img class="title-poster" ng-src="{{aboutVm.title.Poster != 'N/A' && aboutVm.title.Poster || 'https://placeholdit.imgix.net/~text?txtsize=30&txt=Poster+not+available&w=187&h=250&txttrack=0'}}">
+    </div>
+  </div>
+  <div class="title-stats">
+    <b>Plot:</b> {{aboutVm.title.Plot}}<br>
+    <b>Rated:</b> {{aboutVm.title.Rated}}<br>
+    <b>Released:</b> {{aboutVm.title.Released}}<br>
+    <b>Runtime:</b> {{aboutVm.title.Runtime}}<br>
+    <b>Genre:</b> {{aboutVm.title.Genre}}<br>
+    <b>Director:</b> {{aboutVm.title.Director}}<br>
+    <b>Writer:</b> {{aboutVm.title.Writer}}<br>
+    <b>Actors:</b> {{aboutVm.title.Actors}}<br>
+    <b>Language:</b> {{aboutVm.title.Language}}<br>
+    <b>Country:</b> {{aboutVm.title.Country}}<br>
+    <b>Awards:</b> {{aboutVm.title.Awards}}<br>
+    <b>Metascore:</b> {{aboutVm.title.Metascore}}<br>
+    <b>imdbRating:</b> {{aboutVm.title.imbdRating}}<br>
+    <b>imdbVotes:</b> {{aboutVm.title.imbdVotes}}<br>
+    <b>imdbID:</b> {{aboutVm.title.imbdID}}<br>
+    <b>Type:</b> {{aboutVm.title.Type}}<br>
+  </div>
+</div>
